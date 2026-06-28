@@ -1,0 +1,455 @@
+/* Upload Button - Clean & Professional */
+.upload-button {
+  padding: 10px 24px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+}
+
+.upload-button:hover {
+  background: #38a169;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.upload-button:active {
+  transform: translateY(0);
+}
+
+/* Modal Overlay - Clean Dark */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999 !important;
+  padding: 20px;
+  animation: overlayFade 0.2s ease forwards;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Content - Clean Card */
+.modal-content {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: modalSlideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  position: relative;
+  z-index: 1000000 !important;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  color: #1a202c;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Close Button */
+.close-button {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.close-button:hover {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+/* Form Groups */
+.upload-form .form-group {
+  margin-bottom: 18px;
+}
+
+.upload-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.upload-form label[for="title"]::after,
+.upload-form label[for="file"]::after {
+  content: ' *';
+  color: #fc8181;
+}
+
+/* Input Fields - Clean */
+.upload-form input,
+.upload-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background: #f7fafc;
+  color: #2d3748;
+  box-sizing: border-box;
+}
+
+.upload-form input:focus,
+.upload-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: #ffffff;
+}
+
+.upload-form input:hover,
+.upload-form textarea:hover {
+  border-color: #cbd5e0;
+}
+
+.upload-form textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* File Input */
+.upload-form input[type="file"] {
+  padding: 8px;
+  cursor: pointer;
+  border: 1.5px dashed #e2e8f0;
+  background: #f7fafc;
+}
+
+.upload-form input[type="file"]:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+/* File Info */
+.file-info {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+}
+
+.file-info::before {
+  content: '📎';
+  font-size: 14px;
+}
+
+.file-name {
+  flex: 1;
+  word-break: break-all;
+  color: #2d3748;
+}
+
+.file-size {
+  color: #718096;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.2px;
+}
+
+/* Cancel Button */
+.cancel-button {
+  background: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.cancel-button:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.cancel-button:active {
+  transform: scale(0.98);
+}
+
+/* Submit Button */
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.35);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: #e53e3e;
+  font-size: 13px;
+  padding: 8px 12px;
+  background: #fff5f5;
+  border-radius: 6px;
+  border: 1px solid #fc8181;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.error-message::before {
+  content: '⚠️';
+  font-size: 14px;
+}
+
+/* Loading State */
+.submit-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-button.loading::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .modal-content {
+    padding: 24px 20px;
+    width: 95%;
+    border-radius: 12px;
+  }
+
+  .modal-header h2 {
+    font-size: 18px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    padding: 12px;
+  }
+
+  .upload-button {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .modal-header h2 {
+    font-size: 16px;
+  }
+
+  .close-button {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .upload-form input,
+  .upload-form textarea {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Dark Mode - Minimal */
+@media (prefers-color-scheme: dark) {
+  .modal-content {
+    background: #1a202c;
+  }
+
+  .modal-header h2 {
+    color: #f7fafc;
+  }
+
+  .upload-form label {
+    color: #e2e8f0;
+  }
+
+  .upload-form input,
+  .upload-form textarea {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #f7fafc;
+  }
+
+  .upload-form input:focus,
+  .upload-form textarea:focus {
+    background: #2d3748;
+    border-color: #667eea;
+  }
+
+  .upload-form input[type="file"] {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .file-info {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .file-name {
+    color: #f7fafc;
+  }
+
+  .file-size {
+    color: #a0aec0;
+  }
+
+  .cancel-button {
+    background: #2d3748;
+    color: #e2e8f0;
+    border-color: #4a5568;
+  }
+
+  .cancel-button:hover {
+    background: #4a5568;
+  }
+
+  .close-button {
+    color: #718096;
+  }
+
+  .close-button:hover {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+
+  .error-message {
+    background: #2d3748;
+    border-color: #fc8181;
+    color: #fc8181;
+  }
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
