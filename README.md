@@ -62,7 +62,7 @@ Before you begin, ensure you have the following installed/set up:
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/student-notes-app.git
+git clone https://github.com/Rehman481/Student_Notes_App.git
 cd student-notes-app
 ```
 
