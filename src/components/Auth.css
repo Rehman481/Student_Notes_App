@@ -290,72 +290,7 @@ button[type="submit"]:disabled {
   margin-left: 16px;
 }
 
-/* GitHub Button with Animation */
-.github-button {
-  width: 100%;
-  padding: 14px;
-  background: #24292e;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  position: relative;
-  overflow: hidden;
-  animation: fadeInDown 0.6s ease 0.4s both;
-}
-
-.github-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #2d3748, #1a202c);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.github-button:hover:not(:disabled) {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(36, 41, 46, 0.3);
-}
-
-.github-button:hover:not(:disabled)::before {
-  opacity: 1;
-}
-
-.github-button:active:not(:disabled) {
-  transform: scale(0.98);
-}
-
-.github-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: scale(0.98);
-}
-
-.github-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.github-button:hover:not(:disabled) .github-icon {
-  transform: rotate(-4deg) scale(1.1);
-}
-
-/* Toggle Auth Button */
+ /* Toggle Auth Button */
 .toggle-auth {
   display: block;
   margin-top: 20px;
