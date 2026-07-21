@@ -3,13 +3,11 @@ import { createContext, useState, useContext, useEffect } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  // Check if user has a theme preference stored
   const getInitialTheme = () => {
     const storedTheme = localStorage.getItem('theme')
     if (storedTheme) {
       return storedTheme
     }
-    // Check system preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark'
     }
@@ -19,13 +17,17 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(getInitialTheme)
 
   useEffect(() => {
-    // Apply theme to document
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
+    console.log('Theme changed to:', theme) // Debug log
   }, [theme])
 
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+    setTheme(prevTheme => {
+      const newTheme = prevTheme === 'light' ? 'dark' : 'light'
+      console.log('Toggling theme to:', newTheme) // Debug log
+      return newTheme
+    })
   }
 
   return (
@@ -38,6 +40,7 @@ export function ThemeProvider({ children }) {
 export function useTheme() {
   const context = useContext(ThemeContext)
   if (!context) {
+    console.error('useTheme must be used within a ThemeProvider')
     throw new Error('useTheme must be used within a ThemeProvider')
   }
   return context
