@@ -1,6 +1,11 @@
 .dashboard {
   min-height: 100vh;
-  background: #f0f4f8;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .dashboard-content {
@@ -17,8 +22,10 @@
 }
 
 .dashboard-header h1 {
-  color: #2d3748;
+  color: var(--text-primary);
   font-size: 28px;
+
+  transition: color 0.3s ease;
 }
 
 .error-message {

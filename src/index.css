@@ -91,3 +91,22 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+[data-theme="dark"] body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .app {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="light"] .app {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
